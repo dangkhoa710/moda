@@ -1,25 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import Home from './pages/Home';
+import Quiz from './pages/Quiz';
+import ModaMenu from './pages/ModaMenu';
+import Mac from './pages/Mac';
+import Owr from './pages/Owr';
+import Di from './pages/Di';
+import An from './pages/An';
+import { getUserData } from './utils/localStorage';
 
 function App() {
+  const user = getUserData();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Navigate to={user ? '/moda' : '/home'} />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/quiz" element={<Quiz />} />
+        <Route path="/moda" element={<ModaMenu />} />
+        <Route path="/moda/mac" element={<Mac />} />
+        <Route path="/moda/owr" element={<Owr />} />
+        <Route path="/moda/di" element={<Di />} />
+        <Route path="/moda/an" element={<An />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
