@@ -12,12 +12,12 @@ function App() {
   const user = getUserData();
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/moda">
       <Routes>
-        <Route path="/" element={<Navigate to={user ? '/moda/menu' : '/moda/home'} />} />
-        <Route path="/moda/home" element={<Home />} />
-        <Route path="/moda/quiz" element={<Quiz />} />
-        <Route path="/moda/menu" element={<ModaMenu />} />
+        <Route path="/" element={<Navigate to={user ? '/' : '/home'} />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/quiz" element={<Quiz />} />
+        <Route path="/moda" element={<ModaMenu />} />
         <Route path="/moda/mac" element={<Mac />} />
         <Route path="/moda/owr" element={<Owr />} />
         <Route path="/moda/di" element={<Di />} />
