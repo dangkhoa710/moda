@@ -30,7 +30,7 @@ export default function Mac() {
         const today = new Date().toISOString().slice(0, 10); // yyyy-mm-dd
         const cacheKey = `moda_user_outfit_${today}`;
         let suggestion: any = null;
-        const cached = localStorage.getItem('moda_user_outfit');
+        const cached = localStorage.getItem(cacheKey);
 
         if (cached) {
           try {
@@ -55,7 +55,7 @@ export default function Mac() {
         }
 
       } catch (err) {
-        console.error('❌ Lỗi gọi Gemini:', err);
+        console.error('❌ Lỗi :', err);
       } finally {
         setLoading(false);
       }
@@ -71,11 +71,11 @@ export default function Mac() {
       </Button>
 
       <Title level={3}>Trang phục gợi ý cho {user.name} ({user.mbti})</Title>
-      <Text strong>Thời tiết:</Text>{' '}
-      <Text>{getFieldFromStorage('moda_weather_data', 'data.weather.0.description')}, {getFieldFromStorage('moda_weather_data', 'data.main.temp')}°C</Text>
+      <h2>Thời tiết:</h2>{' '}
+      <h2>{getFieldFromStorage('moda_weather_data', 'data.weather.0.description')}, {getFieldFromStorage('moda_weather_data', 'data.main.temp')}°C</h2>
 
       {loading ? (
-        <p>Đang lấy gợi ý từ Gemini...</p>
+        <p>Đang lấy gợi ý ...</p>
       ) : outfit && (
         <Card title="Màu sắc tổng thể" style={{ maxWidth: 600, marginTop: 24, borderRadius: 8 }}>
           {Array.isArray(outfit?.colors) && (
@@ -98,7 +98,7 @@ export default function Mac() {
               ))}
             </div>
           )}
-          <p><strong>Gợi ý:</strong> {outfit.outfit}</p>
+          <h2><strong>Gợi ý:</strong> {outfit.outfit}</h2>
           {outfit.accessories && <p><strong>Phụ kiện:</strong> {outfit.accessories}</p>}
           {outfit.note && <p><em>{outfit.note}</em></p>}
         </Card>
