@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/moda/static/css/main.e5cdda46.css",
-    "main.js": "/moda/static/js/main.be8147b2.js",
+    "main.js": "/moda/static/js/main.1e821e30.js",
     "static/js/238.ba6611d2.chunk.js": "/moda/static/js/238.ba6611d2.chunk.js",
     "static/js/453.2451f121.chunk.js": "/moda/static/js/453.2451f121.chunk.js",
     "index.html": "/moda/index.html",
     "main.e5cdda46.css.map": "/moda/static/css/main.e5cdda46.css.map",
-    "main.be8147b2.js.map": "/moda/static/js/main.be8147b2.js.map",
+    "main.1e821e30.js.map": "/moda/static/js/main.1e821e30.js.map",
     "238.ba6611d2.chunk.js.map": "/moda/static/js/238.ba6611d2.chunk.js.map",
     "453.2451f121.chunk.js.map": "/moda/static/js/453.2451f121.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e5cdda46.css",
-    "static/js/main.be8147b2.js"
+    "static/js/main.1e821e30.js"
   ]
 }
