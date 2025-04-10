@@ -14,14 +14,14 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Navigate to={user ? '/moda' : '/home'} />} />
+        <Route path="/" element={<Navigate to={user ? '/' : '/home'} />} />
         <Route path="/home" element={<Home />} />
         <Route path="/quiz" element={<Quiz />} />
-        <Route path="/moda" element={<ModaMenu />} />
-        <Route path="/moda/mac" element={<Mac />} />
-        <Route path="/moda/owr" element={<Owr />} />
-        <Route path="/moda/di" element={<Di />} />
-        <Route path="/moda/an" element={<An />} />
+        <Route path="/" element={<ModaMenu />} />
+        <Route path="/mac" element={<Mac />} />
+        <Route path="/owr" element={<Owr />} />
+        <Route path="/di" element={<Di />} />
+        <Route path="/an" element={<An />} />
       </Routes>
     </BrowserRouter>
   );
