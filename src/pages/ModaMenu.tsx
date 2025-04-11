@@ -44,10 +44,10 @@ export default function ModaMenu() {
   }, []);
 
   const cards = [
-    { title: 'Mặc', path: '/moda/mac', color: '#d46b08' },
-    { title: 'Ở', path: '/moda/owr', color: '#1890ff' },
-    { title: 'Đi', path: '/moda/di', color: '#52c41a' },
-    { title: 'Ăn', path: '/moda/an', color: '#fa541c' },
+    { title: 'Mặc', path: '/mac', color: '#d46b08' },
+    { title: 'Ở', path: '/owr', color: '#1890ff' },
+    { title: 'Đi', path: '/di', color: '#52c41a' },
+    { title: 'Ăn', path: '/an', color: '#fa541c' },
   ];
 
   return (

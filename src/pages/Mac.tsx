@@ -66,7 +66,7 @@ export default function Mac() {
 
   return (
     <div style={{ padding: 32 }}>
-      <Button onClick={() => navigate('/moda')} style={{ marginBottom: 16 }}>
+      <Button onClick={() => navigate('/menu')} style={{ marginBottom: 16 }}>
         ← Quay lại
       </Button>
 

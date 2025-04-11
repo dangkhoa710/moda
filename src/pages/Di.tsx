@@ -91,7 +91,7 @@ export default function Di() {
 
   return (
     <div style={{ padding: 32 }}>
-      <Button onClick={() => navigate('/moda')} style={{ marginBottom: 16 }}>
+      <Button onClick={() => navigate('/menu')} style={{ marginBottom: 16 }}>
         ← Quay lại
       </Button>
       <Title level={3}>Gợi ý ăn uống hôm nay : </Title>

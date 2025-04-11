@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Home from './pages/Home';
 import Quiz from './pages/Quiz';
 import ModaMenu from './pages/ModaMenu';
@@ -12,18 +12,18 @@ function App() {
   const user = getUserData();
 
   return (
-    <BrowserRouter basename="/moda">
+    <HashRouter>
       <Routes>
-        <Route path="/" element={<Navigate to={user ? '/' : '/home'} />} />
+        <Route path="/" element={<Navigate to={user ? '/menu' : '/home'} />} />
         <Route path="/home" element={<Home />} />
         <Route path="/quiz" element={<Quiz />} />
-        <Route path="/moda" element={<ModaMenu />} />
-        <Route path="/moda/mac" element={<Mac />} />
-        <Route path="/moda/owr" element={<Owr />} />
-        <Route path="/moda/di" element={<Di />} />
-        <Route path="/moda/an" element={<An />} />
+        <Route path="/menu" element={<ModaMenu />} />
+        <Route path="/mac" element={<Mac />} />
+        <Route path="/owr" element={<Owr />} />
+        <Route path="/di" element={<Di />} />
+        <Route path="/an" element={<An />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

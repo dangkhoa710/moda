@@ -29,7 +29,7 @@ export default function Quiz() {
   const handleFinish = () => {
     const mbti = getMBTI();
     addUserInfo(mbti);
-    navigate('/moda');
+    navigate('/menu');
   };
 
   if (current === mbtiQuestions.length) {
